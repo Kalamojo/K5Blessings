@@ -1,9 +1,9 @@
 :root {
-    --light_shade: #F5F9F6;
-    --light_accent: #F4AF54;
-    --main_brand: #AEB8C2;
-    --dark_accent: #C46878;
-    --dark_shade: #466174;
+    --light_shade: #F6F6F3;
+    --light_accent: #A3A89B;
+    --main_brand: #C37438;
+    --dark_accent: #EC8331;
+    --dark_shade: #23201B;
 }
 
 html, body {
@@ -38,7 +38,7 @@ p, li, span, label, input, textarea {
 
 a {
     text-decoration: none;
-    color: var(--dark_accent);
+    color: var(--main_brand);
 }
 ul {
     list-style: none;
@@ -104,8 +104,8 @@ ul {
 }
 #navigation li a:hover,
 #navigation li a.active {
-    background-color: var(--light_shade);
-    color: var(--main_brand);
+    background-color: var(--dark_accent);
+    color: var(--light_shade);
 }
 
 
@@ -170,7 +170,7 @@ ul {
         transition: all 0.5s;
         display: flex;
         flex-direction: column;
-        row-gap: 8em;
+        row-gap: 15vh;
         padding-top: 4em;
     }
     #navigation li {
@@ -182,7 +182,7 @@ ul {
     #navigation li a:hover,
     #navigation li a.active {
         background: none;
-        color: var(--main_brand);
+        color: var(--light_shade);
     }
     #check:checked ~ #navigation {
         left: 0;
