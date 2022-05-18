@@ -207,13 +207,13 @@ ul {
 
 #contact {
     display: grid;
-    gap: 15px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-template-areas: 
         'form hours'
     ;
 
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 #open-hours {
@@ -340,5 +340,15 @@ ul {
     }
     .thumbnail {
         height: 240px;
+    }
+
+    #contact {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'form'
+            'hours'
+        ;
     }
 }
