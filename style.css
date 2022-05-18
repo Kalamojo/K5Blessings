@@ -9,6 +9,11 @@
 html, body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+}
+
+body * {
+    transition: 0.3s;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -24,7 +29,6 @@ h5 {font-size: 20px;}
 h6 {font-size: 16px;}
 
 p, li, span, label, input, textarea {
-    color: var(--dark_shade);
     font-family: 'Inconsolata', monospace;
 }
 
@@ -39,14 +43,21 @@ ul {
 
 .s1 {
     background-color: var(--dark_shade);
-    border-bottom: 2px solid var(--light_accent);
+    color: var(--light_shade);
+    border-bottom: 1px solid var(--light_accent);
+    overflow: auto;
+}
+.s2 {
+    background-color: var(--light_shade);
+    color: var(--dark_shade);
+    border-bottom: 1px solid var(--light_accent);
     overflow: auto;
 }
 
 
 #navigation {
     margin: 0;
-    padding: 10px;
+    padding: 13px;
 }
 
 #navigation li {
@@ -57,8 +68,8 @@ ul {
 
 .nav-wrap {
     position: fixed;
-    z-index: 1;
-    border-radius: 5px 5px 0 0;
+    z-index: 1000;
+    border-radius: 0 0 5px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,14 +77,35 @@ ul {
     width: 100%;
 }
 
+.check-btn {
+    color: var(--light_shade);
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 .logo {
     color: var(--light_shade);
     margin-left: 10px;
 }
 
-.intro-wrap {
+#navigation li a {
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+#navigation li a:hover,
+#navigation li a.active {
     background-color: var(--light_shade);
-    border-bottom: 2px solid var(--light_accent);
+    color: var(--main_brand);
+}
+
+
+.intro-wrap {
+    border-bottom: 1px solid var(--light_accent);
     border-radius: 5px 5px 0 0;
 
     -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -86,8 +118,55 @@ ul {
     margin: 0 auto;
 }
 
+
+.about-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 100px;
+}
+
+#about-img {
+    width: 100%;
+}
+
+
 @media screen and (max-width: 1200px){
     .main-container {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .check-btn {
+        display: block;
+    }
+
+    #navigation {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--dark_shade);
+        top: 30px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    #navigation li {
+        display: block;
+        margin: 80px 0;
+        line-height: 30px;
+    }
+    #navigation li a{
+        font-size: 30px;
+    }
+    #navigation li a:hover,
+    #navigation li a.active {
+        background: none;
+        color: var(--main_brand);
+    }
+    #check:checked ~ ul {
+        left: 0;
     }
 }
