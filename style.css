@@ -205,6 +205,83 @@ ul {
 }
 
 
+#contact {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-areas: 
+        'form hours'
+    ;
+
+    padding-bottom: 40px;
+}
+
+#open-hours {
+    grid-area: hours;
+}
+
+#contact-form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'form-name form-email'
+        'form-phone form-phone'
+        'form-message form-message'
+        'form-send form-send' 
+    ;
+    gap: 15px;
+
+    margin: 0 auto;
+    width: 90%;
+}
+
+#form-name {
+    grid-area: form-name;
+}
+#form-email {
+    grid-area: form-email;
+}
+#form-phone {
+    grid-area: form-phone;
+}
+#form-message {
+    grid-area: form-message;
+}
+#submit-btn {
+    grid-area: form-send;
+}
+
+#contact-form label {
+    line-height: 2.7em;
+}
+
+#contact-form textarea {
+    min-height: 100px;
+    font-size: 14px;
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--light_shade);
+    border-radius: 5px;
+    border: 1px solid var(--light_accent);
+    font-size: 14px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--light_shade);
+    background-color: var(--dark_accent);
+    border: none;
+}
+
+
 @media screen and (max-width: 1200px){
     .main-container {
         width: 95%;
