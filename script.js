@@ -1,5 +1,6 @@
 let btns = document.querySelector('#navigation').querySelectorAll(':scope > li > a');
 let sections = document.querySelectorAll(".s1, .s2");
+let check = document.querySelector('#check');
 
 
 // Select active link
@@ -36,3 +37,8 @@ function getProgress() {
 
 }
 
+for(let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {
+        check.checked = false;
+    })
+}
