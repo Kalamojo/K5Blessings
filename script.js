@@ -1,6 +1,7 @@
 let btns = document.querySelector('#navigation').querySelectorAll(':scope > li > a');
 let sections = document.querySelectorAll(".s1, .s2");
 let check = document.querySelector('#check');
+let logo = document.querySelector('.logo');
 
 
 // Select active link
@@ -38,7 +39,7 @@ function getProgress() {
 }
 
 for(let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function() {
-        check.checked = false;
-    })
+    btns[i].addEventListener('click', () => check.checked = false);
 }
+
+logo.addEventListener('click', () => check.checked = false);
