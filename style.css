@@ -1,9 +1,9 @@
 :root {
-    --light_shade: #F3F2F2;
-    --light_accent: #977656;
-    --main_brand: #9FA6A4;
-    --dark_accent: #955248;
-    --dark_shade: #3A2B26;
+    --light_shade: #FAF9F9;
+    --light_accent: #8C939E;
+    --main_brand: #A8A0B0;
+    --dark_accent: #887792;
+    --dark_shade: #253654;
     --overlay: rgb(35, 32, 27, 0.8);
 }
 
@@ -43,7 +43,7 @@ hr.solid {
 
 a {
     text-decoration: none;
-    color: var(--main_brand);
+    color: var(--dark_shade);
 }
 ul {
     list-style: none;
@@ -410,6 +410,9 @@ ul {
 
     .hamburger {
         display: flex;
+    }
+    a {
+        color: var(--main_brand);
     }
     
 
