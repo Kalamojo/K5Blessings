@@ -1,10 +1,10 @@
 :root {
-    --light_shade: #F4F3F4;
-    --light_accent: #CA8C75;
-    --main_brand: #B590D7;
-    --dark_accent: #896EB7;
-    --dark_shade: #633B86;
-    --overlay: rgb(99, 59, 134, 0.8);
+    --light_shade: #F6F6F4;
+    --light_accent: #90826B;
+    --main_brand: #969F97;
+    --dark_accent: #8D5C50;
+    --dark_shade: #2E242D;
+    --overlay: rgb(46, 36, 45, 0.8);
 }
 
 html, body {
