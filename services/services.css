@@ -27,7 +27,7 @@ html, body {
     padding-top: 40px;
     padding-bottom: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -35,7 +35,7 @@ html, body {
 
 .slider {
     height: 440px;
-    width: 60vw;
+    width: 40vw;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -46,9 +46,12 @@ html, body {
     position: absolute;
     height: 440px;
     left: -120%;
+    transition: all 0.4s ease;
+    opacity: 0;
 }
 
 .current {
+    opacity: 1;
     left: inherit;
 }
 
@@ -58,7 +61,14 @@ html, body {
 }
 
 
-
+@media screen and (max-width: 900px) {
+    .slideshow {
+        justify-content: space-around;
+    }
+    .slider {
+        width: 60vw;
+    }
+}
 
 
 
