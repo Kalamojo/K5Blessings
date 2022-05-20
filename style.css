@@ -1,10 +1,10 @@
 :root {
-    --light_shade: #FAF9F9;
-    --light_accent: #8C939E;
-    --main_brand: #A8A0B0;
-    --dark_accent: #887792;
-    --dark_shade: #253654;
-    --overlay: rgb(37, 54, 84, 0.8);
+    --light_shade: #F4F3F4;
+    --light_accent: #CA8C75;
+    --main_brand: #B590D7;
+    --dark_accent: #896EB7;
+    --dark_shade: #633B86;
+    --overlay: rgb(99, 59, 134, 0.8);
 }
 
 html, body {
@@ -17,21 +17,27 @@ body * {
     transition: 0.2s;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h5 {
+    color: var(--main_brand);
+    font-family: 'Monoton', cursive;
+    font-weight: lighter;
+}
+h3, h4, h6, strong {
     color: var(--main_brand);
     font-family: 'Roboto', serif;
 }
+
 .home-wrap h1 span {
     color: var(--main_brand);
     font-family: 'Roboto', serif;
 }
 
-h1 {font-size: 56px;}
-h2 {font-size: 36px;}
-h3 {font-size: 28px;}
-h4 {font-size: 24px;}
-h5 {font-size: 20px;}
-h6 {font-size: 16px;}
+h1 {font-size: 60px;}
+h2 {font-size: 56px;}
+h3 {font-size: 36px;}
+h4 {font-size: 28px;}
+h5 {font-size: 24px;}
+h6 {font-size: 20px;}
 
 p, li, span, label, input, textarea {
     font-family: 'Inconsolata', monospace;
@@ -315,7 +321,7 @@ ul {
 }
 
 
-#contact {
+#contacts {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -341,7 +347,6 @@ ul {
         'form-send form-send' 
     ;
     gap: 15px;
-
     margin: 0 auto;
     width: 90%;
 }
@@ -466,7 +471,7 @@ ul {
         height: 240px;
     }
 
-    #contact {
+    #contacts {
         display: grid;
         gap: 20px;
         grid-template-columns: 1fr;
