@@ -54,6 +54,16 @@ a {
 ul {
     list-style: none;
 }
+.heading {
+    margin-left: -120%;
+    opacity: 0;
+    transition: margin-left .6s, opacity .4s;
+}
+.head {
+    margin-left: 0;
+    opacity: 1;
+}
+
 
 
 .s1 {
