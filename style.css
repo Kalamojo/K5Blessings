@@ -1,9 +1,9 @@
 :root {
-    --light_shade: #F6F6F3;
-    --light_accent: #A3A89B;
-    --main_brand: #C37438;
-    --dark_accent: #EC8331;
-    --dark_shade: #23201B;
+    --light_shade: #F3F2F2;
+    --light_accent: #977656;
+    --main_brand: #9FA6A4;
+    --dark_accent: #955248;
+    --dark_shade: #3A2B26;
     --overlay: rgb(35, 32, 27, 0.8);
 }
 
@@ -14,7 +14,7 @@ html, body {
 }
 
 body * {
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -157,6 +157,69 @@ ul {
     background-color: var(--dark_accent);
     color: var(--light_shade);
 }
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+/* The slider */
+.switcher {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .switcher:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .switcher {
+    background-color: black;
+  }
+  
+  input:focus + .switcher {
+    box-shadow: 0 0 1px black;
+  }
+  
+  input:checked + .switcher:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .switcher.round {
+    border-radius: 34px;
+  }
+  
+  .switcher.round:before {
+    border-radius: 50%;
+  }
+
+
 
 
 .intro-wrap {

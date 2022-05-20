@@ -1,0 +1,28 @@
+:root {
+    --light_shade: #2C292C;
+    --light_accent: #865665;
+    --main_brand: #E3532A;
+    --dark_accent: #EDA272;
+    --dark_shade: #ECDCCC;
+    --overlay: rgb(44, 41, 44, 0.8);
+}
+
+
+.s1 {
+    background-color: var(--light_shade);
+    border-bottom: 1px solid var(--light_accent);
+    color: var(--dark_shade);
+    overflow: auto;
+}
+
+input, select, textarea {
+    color: var(--dark_shade);
+}
+
+@media screen and (max-width: 900px) {
+    #navigation li a:hover,
+    #navigation li a.active {
+        background: none;
+        color: var(--dark_shade);
+    }
+}

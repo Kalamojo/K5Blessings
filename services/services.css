@@ -1,13 +1,4 @@
 
-:root {
-    --light_shade: #F6F6F3;
-    --light_accent: #A3A89B;
-    --main_brand: #C37438;
-    --dark_accent: #EC8331;
-    --dark_shade: #23201B;
-    --overlay: rgb(35, 32, 27, 0.8);
-}
-
 html, body {
     width: 100%;
     height: 100%;
@@ -58,6 +49,15 @@ html, body {
 #prev, #next {
     z-index: 1;
     cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.slideshow button {
+    color: var(--dark_accent);
+}
+.slideshow button:hover {
+    color: var(--light_accent);
 }
 
 
