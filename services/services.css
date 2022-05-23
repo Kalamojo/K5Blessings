@@ -67,6 +67,11 @@ html, body {
 }
 
 
+.no-slide {
+    height: 80vh;
+}
+
+
 @media screen and (max-width: 900px) {
     .slideshow {
         justify-content: space-around;
