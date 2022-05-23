@@ -68,7 +68,11 @@ html, body {
 
 
 .no-slide {
-    height: 80vh;
+    height: 60vh
+}
+
+.contact-details a {
+    color: var(--light_accent);
 }
 
 
