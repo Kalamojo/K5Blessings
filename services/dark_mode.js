@@ -26,11 +26,11 @@ switcher.addEventListener('change', function() {
 
 function setTheme(mode) {
     if(mode == 'dark') {
-        document.querySelector('#theme-style').href = 'dark.css';
+        document.querySelector('#theme-style').href = '../dark.css';
         switcher.checked = true;
     }
     else {
-        document.querySelector('#theme-style').href = 'style.css';
+        document.querySelector('#theme-style').href = '../style.css';
         switcher.checked = false;
     }
     
