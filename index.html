@@ -176,31 +176,33 @@
         <div class="main-container">
             <div class="booking-wrap">
                 <h3 class="heading">Schedule an Appointment</h3>
+
+                <iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=b2kxaG82bzcyN3Fucm5ycnY3c2tmMDRrM29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000" frameborder="0" scrolling="no"></iframe>
                 
-                <form id="sheetSend" action="">
+                <form id="sheetSend">
                     <div class="column">
                         <label for="book-name">Name</label>
-                        <input id="book-name" class="input-field" type="text" name="name" placeholder="Esther Alabi" required>
+                        <input id="book-name" class="input-field" type="text" name="Name" placeholder="Esther Alabi" required>
                     </div>
 
                     <div class="column">
                         <label for="book-email">Email</label>
-                        <input id="book-email" class="input-field" type="text" name="email" placeholder="estoguns@yahoo.com" required>
+                        <input id="book-email" class="input-field" type="text" name="Email" placeholder="estoguns@yahoo.com" required>
                     </div>
 
                     <div class="column">
                         <label for="book-phone">Phone</label>
-                        <input id="book-phone" class="input-field" type="tel" name="phone" placeholder="956-244-4158" required>
+                        <input id="book-phone" class="input-field" type="tel" name="Phone" placeholder="956-244-4158" required>
                     </div>
 
                     <div class="column">
                         <label for="book-date">Date and Time of Appointment</label>
-                        <input id="book-date" class="input-field" type="datetime-local" name="date" placeholder="Select Date and Time">
+                        <input id="book-date" class="input-field" type="datetime-local" name="Date" placeholder="Select Date and Time">
                     </div>
 
                     <div class="column">
                         <label for="book-duration">Appointment Duration</label>
-                        <select class="input-field" name="duration" id="book-duration" required>
+                        <select class="input-field" name="Duration" id="book-duration" required>
                             <option value="0.5">30 Minutes</option>
                             <option value="1">1 Hour</option>
                             <option value="2">2 Hours</option>
@@ -211,7 +213,7 @@
 
                     <div class="column">
                         <label for="book-service">Service</label>
-                        <select class="input-field" name="service" id="book-service" required>
+                        <select class="input-field" name="Service" id="book-service" required>
                             <option value="Braids">Braids</option>
                             <option value="Facial & Wax">Facial & Wax</option>
                             <option value="Chemical Services">Chemical Services</option>
@@ -224,7 +226,7 @@
 
                     <div id="book-message-area" class="column">
                         <label for="book-message">Service Description</label>
-                        <textarea id="book-message" class="input-field" name="message" placeholder="Black braids hairstyle with pink highlights, tied up in a ponytail" required></textarea>
+                        <textarea id="book-message" class="input-field" name="Description" placeholder="Black braids hairstyle with pink highlights, tied up in a ponytail" required></textarea>
                     </div>
         
                     <input id="book-btn" type="submit" value="Send">

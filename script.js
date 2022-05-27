@@ -55,3 +55,18 @@ for(let i = 0; i < btns.length; i++) {
 logo.addEventListener('click', () => check.checked = false);
 
 
+// Booking form Submission
+let scriptURL = "https://script.google.com/macros/s/AKfycbzSNo1ZrTTmzHOYwWx8L4XEAbjI5eo1WbbRUBMovXma8IGLSgRd9Lfas80URacXa8M3NQ/exec"
+let form = document.querySelector("#sheetSend");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    console.log(form);
+    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+        .then(response => {alert('Success!', response)})
+        .catch(error => alert('Error', error.message));
+})
+
+
+
