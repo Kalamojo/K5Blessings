@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link id="theme-style" type="text/css" rel="stylesheet" href="">
@@ -175,10 +177,48 @@
             <div class="booking-wrap">
                 <h3 class="heading">Schedule an Appointment</h3>
 
-                <iframe class="cal" src="https://calendar.google.com/calendar/embed?src=0dadhdrj1lmghidlhl6lpfsovs%40group.calendar.google.com&ctz=America%2FChicago"></iframe>
+                <iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23795548&ctz=America%2FChicago&showPrint=0&showTitle=0&showCalendars=0&showTabs=1&showDate=1&mode=WEEK&src=b2kxaG82bzcyN3Fucm5ycnY3c2tmMDRrM29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000"></iframe>
             </div>
 
-            <iframe class="book" src="https://docs.google.com/forms/d/e/1FAIpQLSd7-EUYcn4frCLSqZoa4c_xrAr2Rs4_5cyytH4mhaP7EkDG0Q/viewform?embedded=true">Loading…</iframe>
+            <form id="sheetSend" action="">
+                <label for="book-name">Name</label>
+                <input id="book-name" class="input-field" type="text" name="name" placeholder="Esther Alabi" required>
+                
+                <label for="book-email">Email</label>
+                <input id="book-email" class="input-field" type="text" name="email" placeholder="estoguns@yahoo.com" required>
+
+                <label for="book-phone">Phone</label>
+                <input id="book-phone" class="input-field" type="tel" name="phone" placeholder="956-244-4158" required>
+
+                <label for="book-date">Date and Time of Appointment</label>
+                <input id="book-date" class="input-field" type="datetime-local" name="date" placeholder="Select Date and Time">
+
+                <label for="book-duration">Appointment Duration</label>
+                <select class="input-field" name="duration" id="book-duration" required>
+                    <option value="0.5">30 Minutes</option>
+                    <option value="1">1 Hour</option>
+                    <option value="2">2 Hours</option>
+                    <option value="3">3 Hours</option>
+                    <option value="4">4 Hours</option>
+                </select>
+
+                <label for="book-service">Service</label>
+                <select class="input-field" name="service" id="book-service" required>
+                    <option value="Braids">Braids</option>
+                    <option value="Facial & Wax">Facial & Wax</option>
+                    <option value="Chemical Services">Chemical Services</option>
+                    <option value="Dreadlocks">Dreadlocks</option>
+                    <option value="Special Services">Special Services</option>
+                    <option value="Sew-In & Extensions">Sew-In & Extensions</option>
+                    <option value="Other Services">Other Services</option>
+                </select>
+
+                <label for="book-message">Service Description</label>
+                <textarea id="book-message" class="input-field" name="message" placeholder="Black braids hairstyle with pink highlights, tied up in a ponytail" required></textarea>
+
+                <input id="book-btn" type="submit" value="Send">
+            </form>
+
         </div>
         
     </section>
@@ -198,7 +238,7 @@
                     
                     <input type="hidden" name="_next" value="https://k5blessings.com/thanks.html">
     
-                    <textarea id="form-message" class="input-field" name="message" placeholder="Please describe your desired service and the time you are available to come in" required></textarea>
+                    <textarea id="form-message" class="input-field" name="message" placeholder="Email Content" required></textarea>
     
                     <input id="submit-btn" type="submit" value="Send">
                 </form>
@@ -215,6 +255,19 @@
 
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="dark_mode.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        config = {
+            enableTime: true,
+            dateFormat: "n/j/Y H:i",
+            altInput: true,
+            altFormat: "F j, Y (h:S K)",
+        }
+
+        flatpickr("input[type=datetime-local]", config);
+    </script>
     
 </body>
 </html>
