@@ -336,6 +336,30 @@ ul {
     height: 100vh;
 }
 
+#sheetSend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    width: 400px;
+}
+#book-message-area {
+    width: 90%;
+}
+
+#book-btn {
+    margin-top: 10px;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--light_shade);
+    background-color: var(--dark_accent);
+    border: none;
+}
+
 
 #contacts {
     display: grid;
