@@ -512,6 +512,10 @@ ul {
         height: 240px;
     }
 
+    .column {
+        width: 80%;
+    }
+
     #contacts {
         display: grid;
         gap: 20px;
