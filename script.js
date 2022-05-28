@@ -56,7 +56,7 @@ logo.addEventListener('click', () => check.checked = false);
 
 
 // Booking form Submission
-let scriptURL = "https://script.google.com/macros/s/AKfycbzSNo1ZrTTmzHOYwWx8L4XEAbjI5eo1WbbRUBMovXma8IGLSgRd9Lfas80URacXa8M3NQ/exec"
+let scriptURL = "https://script.google.com/macros/s/AKfycbzetj7fNesVgh82BulZqbxZ-Dmhb0kMiGtxYslurM1Scm2sUNvSsmbHsCRlvr6GkWcBcA/exec";
 let form = document.querySelector("#sheetSend");
 
 form.addEventListener('submit', (e) => {
