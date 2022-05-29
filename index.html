@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" crossorigin="anonymous">
 
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link id="theme-style" type="text/css" rel="stylesheet" href="">
@@ -177,7 +179,10 @@
             <div class="booking-wrap">
                 <h3 class="heading">Schedule an Appointment</h3>
 
-                <iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&mode=WEEK&showPrint=0&showTitle=0&showCalendars=0&showTabs=1&showNav=1&src=YTVzOTkzMDBkY21lZGZjamNpNmVjOTk0ZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457"  frameborder="0" scrolling="no"></iframe>
+                <div class="cal">
+                    <div class="cal-full" id="full-calendar"></div>
+                </div>
+                <!--<iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&mode=WEEK&showPrint=0&showTitle=0&showCalendars=0&showTabs=1&showNav=1&src=YTVzOTkzMDBkY21lZGZjamNpNmVjOTk0ZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457"  frameborder="0" scrolling="no"></iframe>-->
                 
                 <form id="sheetSend">
                     <div class="column">
@@ -269,6 +274,33 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="dark_mode.js"></script>
 
+    <!--Fullcalendar-->
+    <script src='fullcalendar/main.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('full-calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                googleCalendarApiKey: 'AIzaSyBTX8mwjQmyOLozHCi5_IpYig9-Eo_TnU0',
+                events: {
+                    googleCalendarId: 'a5s99300dcmedfcjci6ec994ec@group.calendar.google.com',
+                },
+                eventDataTransform: function(event) {
+                    event.url = "";
+                    return event;
+                }
+            });
+          calendar.render();
+        });
+
+        //API Key: AIzaSyBTX8mwjQmyOLozHCi5_IpYig9-Eo_TnU0
+        
+        //CalendarId: a5s99300dcmedfcjci6ec994ec@group.calendar.google.com
+
+    </script>
+    
     <!--For DateTime functionality-->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
