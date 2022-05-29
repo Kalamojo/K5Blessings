@@ -338,6 +338,12 @@ ul {
     background-color: var(--light_shade);
     color: var(--dark_shade);
 }
+.fc-event-title-container {
+    background-color: var(--dark_accent);
+}
+.fc-event-time {
+    background-color: var(--light_accent);
+}
 
 .book {
     display: block;
