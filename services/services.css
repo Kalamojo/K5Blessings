@@ -14,8 +14,26 @@ html, body {
     list-style: square;
 }
 
+.yes-slide {
+    display: grid;
+    row-gap: 15vh;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-areas:
+        'introduction introduction'
+        'service-list slideshow'
+        'contact slideshow'
+    ;
+}
+
+
+.introduction {
+    grid-area: introduction;
+}
+
 
 .service-list {
+    grid-area: service-list;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +41,7 @@ html, body {
 
 
 .slideshow {
+    grid-area: slideshow;
     padding-top: 40px;
     padding-bottom: 40px;
     display: flex;
@@ -71,12 +90,25 @@ html, body {
     height: 60vh
 }
 
+.contact-details {
+    grid-area: contact;
+}
 .contact-details a {
     color: var(--light_accent);
 }
 
 
 @media screen and (max-width: 900px) {
+    .yes-slide {
+        gap: 20px;
+        grid-template-areas:
+            'introduction'
+            'service-list'
+            'slideshow'
+            'contact'
+        ;
+    }
+
     .slideshow {
         justify-content: space-around;
     }
