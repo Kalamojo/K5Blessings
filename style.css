@@ -1,9 +1,9 @@
 :root {
-    --light_shade: #F6F6F4;
-    --light_accent: #90826B;
-    --main_brand: #969F97;
-    --dark_accent: #8D5C50;
-    --dark_shade: #2E242D;
+    --light_shade: #EFEFEF;
+    --light_accent: #8998A2;
+    --main_brand: #9C545F;
+    --dark_accent: #7E7B9B;
+    --dark_shade: #261925;
     --overlay: rgb(46, 36, 45, 0.8);
 }
 
