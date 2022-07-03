@@ -4,7 +4,7 @@
     --main_brand: #9C545F;
     --dark_accent: #7E7B9B;
     --dark_shade: #261925;
-    --overlay: rgb(46, 36, 45, 0.8);
+    --overlay: rgb(38, 25, 37, 0.8);
 }
 
 html, body {
@@ -487,7 +487,7 @@ ul {
         width: 100%;
         height: 100%;
         background: var(--overlay);
-        top: 40px;
+        top: 50px;
         left: -120%;
         transition: all 0.5s ease;
         display: flex;
