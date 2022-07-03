@@ -163,6 +163,12 @@ ul {
     margin-left: 20px;
     font-size: 25px;
 }
+.logo svg {
+    padding-top: 10px;
+}
+.logo svg * {
+    fill: var(--dark_accent);
+}
 
 #navigation li a {
     padding: 6px 10px;
