@@ -32,7 +32,7 @@ function getProgress() {
             document.querySelector(".active").className = document.querySelector(".active").className.replace(" active", "");
             btns[i].className += " active";
         }
-        if(currentPos <= 600) {
+        if(currentPos <= 500) {
             document.querySelector(".head").classList.toggle('head');
             headings[j].classList.toggle('head');
         }
